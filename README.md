@@ -27,5 +27,5 @@ src/
 ├── App.tsx               # Componente principal  
 ├── main.tsx              # Ponto de entrada  
 └── styles/               # Estilos globais  
-    ├── globals.css  
-    └── theme.css  
+    └── globals.css  
+

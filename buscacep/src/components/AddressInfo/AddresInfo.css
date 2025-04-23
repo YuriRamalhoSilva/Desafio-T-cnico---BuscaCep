@@ -1,0 +1,13 @@
+.AddresInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    
+}
+.AddresInfo.active{
+    max-height: 500px; /* Ajuste conforme necessário */
+    padding: 15px;
+}
