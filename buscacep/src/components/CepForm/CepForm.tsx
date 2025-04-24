@@ -3,10 +3,10 @@ import "./CepForm.css";
 
 interface CepFormProps {
     onSearch: (cep: string) => void; // Recebe a função do pai
-    isLoading: boolean;
+    
 }
 
-function CepForm ({onSearch, isLoading}: CepFormProps) {
+function CepForm ({onSearch}: CepFormProps) {
 
     const [cep, setCep] = useState('');
 
