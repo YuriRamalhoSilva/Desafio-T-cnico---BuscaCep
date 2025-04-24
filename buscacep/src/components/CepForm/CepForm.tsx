@@ -3,7 +3,6 @@ import "./CepForm.css";
 
 interface CepFormProps {
     onSearch: (cep: string) => void; // Recebe a função do pai
-    
 }
 
 function CepForm ({onSearch}: CepFormProps) {

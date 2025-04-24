@@ -13,7 +13,7 @@ function App() {
       <h1>Consulta de CEP</h1>
       
       {/* Passa a função searchCep para o componente de formulário */}
-      <CepForm onSearch={searchCep} isLoading={loading} />
+      <CepForm onSearch={searchCep}/>
       
       {/* Passa os dados para o componente de exibição */}
       <AddressInfo data={data} loading={loading} error={error} />
