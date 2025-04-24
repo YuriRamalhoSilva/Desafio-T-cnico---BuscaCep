@@ -1,7 +1,10 @@
 export interface CepData {
-    logradouro?: string;
-    complemento?: string;
-    bairro?: string;
-    localidade: string; // Cidade
-    estado: string;        
-  }
+  cep: string;
+  logradouro: string;
+  complemento: string;
+  bairro: string;
+  localidade: string;
+  uf: string;
+  estado?: string;
+  
+}

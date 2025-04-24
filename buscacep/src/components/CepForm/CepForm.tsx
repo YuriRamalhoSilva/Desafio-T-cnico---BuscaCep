@@ -1,19 +1,43 @@
+import { useState } from "react";
 import "./CepForm.css";
 
-function CepForm () {
-    
-    
-    
+interface CepFormProps {
+    onSearch: (cep: string) => void; // Recebe a função do pai
+    isLoading: boolean;
+}
 
+function CepForm ({onSearch, isLoading}: CepFormProps) {
+
+    const [cep, setCep] = useState('');
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        onSearch(cep);
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+       
+        const value = e.target.value
+          .replace(/\D/g, '')
+          .replace(/(\d{5})(\d)/, '$1-$2')
+          .slice(0, 9);
+        
+        setCep(value);
+    };
+    
     return (
-        <div className="CepForm">
-            
-            <form action="">
-                <input type="number" />
-                <button type="submit">Search</button>
-            </form>
-        </div>
-    )
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={cep}
+            onChange={handleChange}
+            placeholder="00000-000"
+            maxLength={9}
+          />
+          <button type="submit">Buscar</button>
+          
+        </form>
+    );
 }
 
 export default CepForm
